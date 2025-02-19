@@ -88,7 +88,6 @@ def fourteenth_task(data):
 
     print("Форма массива:", arr.shape)
 
-
 def main():
     parser = argparse.ArgumentParser(description='Process some recipes.')
     parser.add_argument('--path', type=str, required=True, help='Path to the data file')
@@ -132,7 +131,6 @@ def main():
     thirteenth_task(data)
     print("Задание 14:")
     fourteenth_task(data)
-
 
 if __name__ == '__main__':
     main()
