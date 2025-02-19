@@ -119,4 +119,5 @@ def main():
     print("Задание 14:")
     fourteenth_task(data)
 
-main()
+if __name__ == '__main__':
+    main()
