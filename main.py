@@ -89,7 +89,20 @@ def fourteenth_task(data):
 
 
 def main():
-    data = open_file('data.csv')
+    parser = argparse.ArgumentParser(description='Process some recipes.')
+    parser.add_argument('--path', type=str, required=True, help='Path to the data file')
+    args = parser.parse_args()
+
+    if not args.path:
+        print("Error: Укажите путь к таблице.")
+        exit(1)
+
+    try:
+        data = open_file(args.path)
+    except Exception as e:
+        print("Error: Не удалось открыть файл.")
+        exit(1)
+
     print("Задание 1:")
     first_task(data)
     print("Задание 2:")
@@ -118,6 +131,7 @@ def main():
     thirteenth_task(data)
     print("Задание 14:")
     fourteenth_task(data)
+
 
 if __name__ == '__main__':
     main()
